@@ -1,0 +1,152 @@
+.news-card {
+  display: flex;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+  margin: 16px auto;
+  transition: all 0.3s ease;
+  padding: 16px;
+  gap: 15px;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.news-card img {
+  width: 30%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.news-card-content {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.first h2 {
+  font-size: 24px;
+  color: #333;
+  font-weight: normal;
+}
+.authordate {
+  margin-top: 10px;
+  display: flex;
+}
+
+.authordate h3 {
+  font-size: 14px;
+  color: #777;
+}
+.authordate h3 span {
+  font-weight: bold;
+  color: black;
+}
+.authordate h4 {
+  font-size: 14px;
+  color: #777;
+}
+
+.news-card-content p {
+  font-size: 16px;
+  color: #555;
+  line-height: 20px;
+  font-weight: normal;
+}
+
+.news-card-content a {
+  text-decoration: none;
+  display: inline-flex;
+  gap: 5px;
+  font-weight: bold;
+  transition: color 0.2s ease;
+  color: inherit;
+}
+.readme {
+  text-decoration: none;
+}
+.source-name {
+  color: #e03e3e;
+}
+
+.news-card-content a:hover {
+  color: #e03e3e;
+}
+
+@media (max-width: 768px) {
+  .news-card {
+    flex-direction: column;
+    padding: 12px;
+    max-width: 100%;
+  }
+
+  .news-card img {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 12px;
+  }
+
+  .news-card-content {
+    height: auto;
+  }
+
+  .first h2 {
+    font-size: 20px;
+  }
+
+  .authordate h3,
+  .authordate h4 {
+    font-size: 12px;
+  }
+
+  .news-card-content p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .news-card {
+    padding: 10px;
+    gap: 10px;
+  }
+  .news-card img {
+    height: 150px;
+    margin-bottom: 8px;
+  }
+
+  .news-card-content {
+    padding: 0;
+  }
+
+  .first h2 {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .authordate h3,
+  .authordate h4 {
+    font-size: 12px;
+  }
+  .authordate {
+    display: flex;
+    flex-direction: column;
+  }
+  .news-card-content p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .news-card-content a {
+    font-size: 14px;
+    gap: 4px;
+  }
+}
